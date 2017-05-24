@@ -3,10 +3,6 @@
 
 <head>
   <title>Mr Robot!</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" />
-  <link rel="stylesheet/less" href="css/styles.less" type="text/css" />
-  <script src="javascript/less.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -28,27 +24,51 @@
   </header>
 
   <form>
-    <fieldset>
-      <legend>Select a CPU</legend>
-      <p><label for="i3"><input type="radio" name="CPU" id="i3">Intel i3</label></p>
-      <p><label for="i4"><input type="radio" name="CPU" id="i4"></label>Intel i4</p>
-      <p><label for="i7"><input type="radio" name="CPU" id="i7"></label>Intel i7</p>
-    </fieldset>
-    <fieldset>
-      <legend>Select Ram</legend>
-      <p><label for="8"><input type="radio" name="ram" id="8">8gig</label></p>
-      <p><label for="16"><input type="radio" name="ram" id="16">16gig</label></p>
-    </fieldset>
-    <fieldset>
-      <legend></legend>
+    <table>
+      <tr>
+        <td>
+          <center>
+            <legend>Select a CPU</legend>
+          </center>
+        </td>
+        <td>
+          <p id="p2"><input type="radio" name="CPU" id="i3">Intel i3</p>
+          <p id="p2"><input type="radio" name="CPU" id="i4">Intel i4</p>
+          <p id="p2"><input type="radio" name="CPU" id="i7">Intel i7</p>
+        </td>
 
-      <p><label for="vrh"><input type="checkbox" name="" id="vrh">Virtual Reality Helmet</label></p>
-      <p><label for="3ds"><input type="checkbox" name="" id="3ds">3D Screen</label></p>
-      <p><label for="ss"><input type="checkbox" name="" id="ss">Stereo Speakers</label></p>
-    </fieldset>
+        <tr>
+          <td>
+            <center>
+              <legend>Select Ram</legend>
+            </center>
+          </td>
+          <td>
+            <p id="p2"><input type="radio" name="ram" id="8">8gig</p>
+            <p id="p2"><input type="radio" name="ram" id="16">16gig</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <center>
+              <legend>Select Extras</legend>
+            </center>
+          </td>
+          <td>
+            <p id="p2"><input type="checkbox" name="" id="vrh">Virtual Reality Helmet</p>
+            <p id="p2"><input type="checkbox" name="" id="3ds">3D Screen</p>
+            <p id="p2"><input type="checkbox" name="" id="ss">Stereo Speakers</p>
+          </td>
+        </tr>
+    </table>
+    <br>
     <p>
-      <button>Submit</button>
+      <center>
+        <button>Submit</button>
+      </center>
     </p>
+    <br>
   </form>
   <footer>
     <center>
@@ -57,7 +77,13 @@
     </center>
   </footer>
 
-
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" />
+  <link rel="stylesheet/less" href="css/styles.less" type="text/css" />
+  <script src="javascript/less.js" type="text/javascript"></script>
+  <script src="javascript/jquery-3.2.1.js" type="text/javascript"></script>
+  <script src="javascript/app.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
   <script>
     /* TODO: Move To js file */
     /*********************************************************
@@ -82,7 +108,7 @@
           results += radiobuttons[m].name + '=' + radiobuttons[m].value + '\n';
         }
         // alert results
-        alert(results);
+        console.log(results);
       });
     }
   </script>
